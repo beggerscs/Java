@@ -1,0 +1,175 @@
+Q.Create an application using Java swings to implement a checkbox
+
+import java.awt.*;
+import javax.swing.*;
+import java.awt.event.*;
+class CheckBoxDemo extends JFrame implements ItemListener
+{
+JCheckBox chk1,chk2,chk3,chk4;
+JLabel lbl,lbl2;
+public CheckBoxDemo()
+{
+setLayout(new FlowLayout());
+lbl = new JLabel("Select Your Hobbies :");
+lbl2 = new JLabel("Output");
+chk1 = new JCheckBox("Cricket");
+chk2 = new JCheckBox("Hockey");
+chk3 = new JCheckBox("Football");
+chk4 = new JCheckBox("Reading Books");
+chk1.addItemListener(this);
+chk2.addItemListener(this);
+chk3.addItemListener(this);
+chk4.addItemListener(this);
+add(lbl);
+add(chk1);
+add(chk2);
+add(chk3);
+add(chk4);
+add(lbl2);
+setSize(300,300);
+setTitle("Irfan_9");
+setVisible(true);
+}
+@Override
+public void itemStateChanged(ItemEvent ie)
+{
+String str = "Selected Hobbies are : ";
+if(chk1.isSelected())
+{
+str = str + chk1.getText()+" , ";
+}
+if(chk2.isSelected())
+{
+str = str + chk2.getText()+" , ";
+}
+if(chk3.isSelected())
+{
+str = str + chk3.getText()+" , ";
+}
+if(chk4.isSelected())
+{
+str = str + chk4.getText()+" , ";
+}
+lbl2.setText(str);
+}
+}
+public class CheckBoxTest
+{
+public static void main(String[] args)
+{
+CheckBoxDemo obj = new CheckBoxDemo();
+}
+}
+
+
+
+
+Q.Create an application using Java swings to implement a randomcolour
+
+import java.awt.*;
+import javax.swing.*;
+import java.awt.event.*;
+class JRadioButtonDemo extends JFrame implements ItemListener
+{
+JRadioButton rbtn1,rbtn2,rbtn3;
+ButtonGroup g;
+Container c;
+public JRadioButtonDemo()
+{
+setLayout(new FlowLayout());
+c = getContentPane();
+g = new ButtonGroup();
+rbtn1 = new JRadioButton("Red");
+rbtn2 = new JRadioButton("Green");
+rbtn3 = new JRadioButton("Blue");
+rbtn1.addItemListener(this);
+rbtn2.addItemListener(this);
+rbtn3.addItemListener(this);
+g.add(rbtn1);
+g.add(rbtn2);
+g.add(rbtn3);
+add(rbtn1);
+add(rbtn2);
+add(rbtn3);
+setSize(300,300);
+setTitle("Irfan_9");
+setVisible(true);
+}
+@Override
+public void itemStateChanged(ItemEvent e)
+{
+if(rbtn1.isSelected())
+{
+c.setBackground(Color.red);
+}
+else if(rbtn2.isSelected())
+{
+c.setBackground(Color.green);
+}
+else if(rbtn3.isSelected())
+{
+c.setBackground(Color.blue);
+}
+}
+}
+public class RadioTest
+{
+public static void main(String[] args)
+{
+JRadioButtonDemo obj = new JRadioButtonDemo();
+}
+}
+
+
+
+
+Q.Create an application using Java swings to implement a mouse event
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+class MLDemo extends JFrame implements MouseListener
+{
+Container c;
+public MLDemo()
+{
+setLayout(new FlowLayout());
+c = getContentPane();
+addMouseListener(this);
+setSize(350, 300);
+setTitle("Irfan_9");
+setResizable(false);
+setVisible(true);
+}
+public void mouseEntered(MouseEvent me)
+{
+int r = (int)(Math.random() * 255);
+int g = (int)(Math.random() * 255);
+int b = (int)(Math.random() * 255);
+System.out.println("r = " + r +"\t g="+g +"\tb="+b);
+Color mycolor = new Color(r,g,b);
+c.setBackground(mycolor);
+}
+public void mouseExited(MouseEvent me)
+{
+c.setBackground(Color.yellow);
+}
+public void mouseClicked(MouseEvent me)
+{
+c.setBackground(Color.red);
+}
+public void mousePressed(MouseEvent me)
+{
+c.setBackground(Color.green);
+}
+public void mouseReleased(MouseEvent me)
+{
+c.setBackground(Color.blue);
+}
+}
+public class MouseEventTest {
+public static void main(String[] args)
+{
+MLDemo obj = new MLDemo();
+}
+}
