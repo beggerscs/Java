@@ -1,0 +1,117 @@
+Write a program to accept number from user display addition, multiple,
+subtraction, division.
+
+import java.util.*;
+public class Arithmetic {
+ public static void main(String args[]) {
+ int first, second, add, subtract, multiply;
+ float divide;
+ Scanner sc = new Scanner(System.in);
+ System.out.println("Irfan Ali, Roll No: 9");
+ System.out.println("Enter Two Numbers: ");
+ first = sc.nextInt();
+ second = sc.nextInt();
+ add = first + second;
+ subtract = first - second;
+ multiply = first * second;
+ divide = (float) first / second;
+ System.out.println("Sum = " + add);
+ System.out.println("Difference = " + subtract);
+ System.out.println("Multiplication = " + multiply);
+ System.out.println("Division = " + divide);
+ sc.close();
+ }
+}
+
+
+
+Write a program to accept a number from user and check whether it is even or odd.
+
+import java.util.*;
+public class EvenOrOdd {
+ public static void main(String[] args) {
+ System.out.println("Irfan Ali, Rollno: 9");
+ Scanner scanner = new Scanner(System.in);
+
+
+ System.out.print("Enter a number: ");
+ int number = scanner.nextInt();
+
+
+ if (number % 2 == 0) {
+ System.out.println("The number is even.");
+ } else {
+ System.out.println("The number is odd.");
+ }
+
+
+
+ }
+}
+
+
+
+
+Write a program to accept two numbers from the user and display the larger number using conditional operator.
+
+import java.util.*;
+public class LargerNumber {
+ public static void main(String[] args) {
+ System.out.println("Irfan Ali, Rollno: 9");
+ Scanner scanner = new Scanner(System.in);
+
+ System.out.print("Enter the first number: ");
+ int num1 = scanner.nextInt();
+
+ System.out.print("Enter the second number: ");
+ int num2 = scanner.nextInt();
+
+ int larger = (num1 > num2) ? num1 : num2;
+
+ System.out.println("The larger number is: " + larger);
+
+
+ }
+}
+
+
+
+
+Write a program to accept name, roll no, percentage from the user usingcommand line argument and display the same.
+import java.util.*;
+
+public class StudentInfo {
+ public static void main(String[] args) {
+ System.out.println("Irfan Ali, Rollno: 9");
+ Scanner scanner = new Scanner(System.in);
+ System.out.print("Enter your name: ");
+ String name = scanner.nextLine();
+ System.out.print("Enter your roll number: ");
+ String rollNo = scanner.nextLine();
+ System.out.print("Enter your percentage: ");
+ String percentage = scanner.nextLine();
+ System.out.println("Name: " + name);
+ System.out.println("Roll No: " + rollNo);
+ System.out.println("Percentage: " + percentage);
+ }
+}
+
+
+
+
+Write a program to accept year from the user and check whether it is leap year or not.
+
+import java.util.*;
+public class LeapYear {
+ public static void main(String[] args) {
+ System.out.println("Irfan Ali, Rollno: 9");
+ Scanner scanner = new Scanner(System.in);
+ System.out.print("Enter a year: ");
+ int year = scanner.nextInt();
+ if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
+ System.out.println(year + " is a leap year.");
+ } else {
+ System.out.println(year + " is not a leap year.");
+ }
+ }
+}
