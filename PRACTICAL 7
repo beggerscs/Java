@@ -1,0 +1,326 @@
+Q.Create an application using Java swings to implement a simple calculator
+
+import java.awt.*;
+import javax.swing.*;
+import java.awt.event.*;
+class SimpleCalculatorDemo extends JFrame implements ActionListener
+{
+JLabel lbl1,lbl2,lbl3;
+JTextField txt1,txt2;
+JButton btnAdd,btnSub,btnMult,btnDiv,btnClear;
+public SimpleCalculatorDemo()
+{
+setLayout(new FlowLayout());
+lbl1 = new JLabel("Enter First Number :");
+lbl2 = new JLabel("Enter Second Number :");
+lbl3 = new JLabel("Result");
+txt1 = new JTextField(10);
+txt2 = new JTextField(10);
+btnAdd = new JButton("Add");
+btnSub = new JButton("Sub");
+btnMult = new JButton("Mult");
+btnDiv = new JButton("Div");
+btnClear = new JButton("Clear");
+btnAdd.addActionListener(this);
+btnSub.addActionListener(this);
+btnMult.addActionListener(this);
+btnDiv.addActionListener(this);
+btnClear.addActionListener(this);
+add(lbl1);
+add(txt1);
+add(lbl2);
+add(txt2);
+add(btnAdd);
+add(btnSub);
+add(btnDiv);
+add(btnMult);
+add(btnClear);
+add(lbl3);
+setSize(320,300);
+setTitle("Simple Calculator");
+setVisible(true);
+}
+public void actionPerformed(ActionEvent ae)
+{
+int n1 = Integer.parseInt(txt1.getText());
+int n2 = Integer.parseInt(txt2.getText());
+int ans = 0;
+if(ae.getSource() == btnAdd)
+{
+ans = n1 + n2;
+}
+else if(ae.getSource() == btnSub)
+{
+ans = n1 - n2;
+}
+else if(ae.getSource() == btnMult)
+{
+ans = n1 * n2;
+}
+else if(ae.getSource() == btnDiv)
+{
+ans = n1 / n2;
+}
+else
+{
+txt1.setText("");
+txt2.setText("");
+lbl3.setText("Result");
+}
+lbl3.setText("Result =" + ans);
+}
+}
+public class SimpleCalculatorTest
+{
+public static void main(String[] args)
+{
+SimpleCalculatorDemo obj = new SimpleCalculatorDemo();
+}
+}
+
+
+
+
+Q.Create an application using Java swings to implement a login page
+import java.awt.*;
+import javax.swing.*;
+import java.awt.event.*;
+class LoginDemo extends JFrame implements ActionListener
+{
+JLabel lblUsername, lblPassword, lblOutput;
+JTextField txtUsername;
+JPasswordField txtPassword;
+JButton btnLogin;
+public LoginDemo()
+{
+setLayout(new FlowLayout());
+lblUsername = new JLabel("Username:");
+lblPassword = new JLabel("Password:");
+lblOutput = new JLabel("");
+txtUsername = new JTextField(15);
+txtPassword = new JPasswordField(15);
+btnLogin = new JButton("Login");
+btnLogin.addActionListener(this);
+add(lblUsername);
+add(txtUsername);
+add(lblPassword);
+add(txtPassword);
+add(btnLogin);
+add(lblOutput);
+setSize(300, 300);
+setTitle("Saamina_23");
+setVisible(true);
+}
+public void actionPerformed(ActionEvent ae)
+{
+String username = txtUsername.getText();
+String password = new String(txtPassword.getPassword());
+if ("samina".equals(username) && "samina123".equals(password))
+{
+lblOutput.setText("Login Successful");
+}
+else
+{
+lblOutput.setText("Login Failed");
+}
+}
+}
+public class Login
+{
+public static void main(String[] args)
+{
+LoginDemo obj = new LoginDemo();
+}
+}
+
+
+
+
+Q.Create an application using Java swings to implement a randomcolour
+import java.awt.*;
+import javax.swing.*;
+import java.awt.event.*;
+class ChangeColorDemo extends JFrame implements ActionListener
+{
+JButton btn1;
+Container c;
+public ChangeColorDemo()
+{
+setLayout(new FlowLayout());
+c = getContentPane();
+btn1 = new JButton("Chnage Color");
+btn1.addActionListener(this);
+add(btn1);
+setSize(300,300);
+setTitle("Irfan_9");
+setVisible(true);
+}
+public void actionPerformed(ActionEvent ae)
+{
+int r = (int)(Math.random() * 255);
+int g = (int)(Math.random() * 255);
+int b = (int)(Math.random() * 255);
+System.out.println("r = " + r +"\t g="+g +"\tb="+b);
+Color mycolor = new Color(r,g,b);
+c.setBackground(mycolor);
+}
+}
+public class ChangeColorTest
+{
+public static void main(String[] args)
+{
+ChangeColorDemo obj = new ChangeColorDemo();
+}
+}
+
+
+
+
+Q.Create an application using Java swings to implement a factorial of the number
+
+import java.awt.*;
+import javax.swing.*;
+import java.awt.event.*;
+class FactorialDemo extends JFrame implements ActionListener
+{
+JLabel lblInput, lblOutput;
+JTextField txtInput;
+JButton btnfactorial;
+public FactorialDemo()
+{
+setLayout(new FlowLayout());
+lblInput = new JLabel("Enter a number:");
+lblOutput = new JLabel("Factorial is: ");
+txtInput = new JTextField(5);
+btnfactorial = new JButton("Factorial");
+btnfactorial.addActionListener(this);
+add(lblInput);
+add(txtInput);
+add(btnfactorial);
+add(lblOutput);
+setSize(300, 300);
+setTitle("Irfan_9");
+setVisible(true);
+}
+@Override
+public void actionPerformed(ActionEvent e)
+{
+String input = txtInput.getText();
+int number = Integer.parseInt(input);
+int f=1;
+for(int i=1;i<=number;i++)
+{
+f=f*i;
+}
+lblOutput.setText("Factorial: " + f);
+}
+}
+public class FactorialTest
+{
+public static void main(String[] args){
+FactorialDemo obj=new FactorialDemo();
+}
+}
+
+
+
+
+Q.Create an application using Java swings to implement a reverse of the number and sum of the digit. 
+
+import java.awt.*;
+import javax.swing.*;
+import java.awt.event.*;
+class RnSDemo extends JFrame implements ActionListener
+{
+JLabel lblInput, lbl1, lbl2;
+JTextField txtInput;
+JButton btnRev, btnSum;
+public RnSDemo()
+{
+setLayout(new FlowLayout());
+lblInput = new JLabel("Enter a number:");
+lbl1 = new JLabel("Reverse is: ");
+lbl2 = new JLabel("Sum of digits is: ");
+txtInput = new JTextField(5);
+btnRev = new JButton("Reverse");
+btnSum = new JButton("Sum of Digits");
+btnRev.addActionListener(this);
+btnSum.addActionListener(this);
+add(lblInput);
+add(txtInput);
+add(btnRev);
+add(btnSum);
+add(lbl1);
+add(lbl2);
+setSize(300, 300);
+setTitle("Irfan_9");
+setVisible(true);
+}
+@Override
+public void actionPerformed(ActionEvent e)
+{
+String input = txtInput.getText();
+int number = Integer.parseInt(input);
+int rev = 0;
+int sum = 0;
+while(number > 0)
+{
+int r = number % 10 ;
+rev = rev * 10 + r;
+sum = sum + r;
+number = number / 10;
+}
+lbl1.setText("Reverse: " + rev);
+lbl2.setText("Sum of Digits: " + sum);
+}
+}
+public class RNSTest
+{
+public static void main(String[] args)
+{
+RnSDemo obj= new RnSDemo();
+}
+}
+
+
+
+
+Q.Create an application using Java swings to implement a decimal to binary
+
+import java.awt.*;
+import javax.swing.*;
+import java.awt.event.*;
+class DTBDemo extends JFrame implements ActionListener {
+JLabel lblInput, lblOutput;
+JTextField txtInput;
+JButton btnConvert;
+public DTBDemo() {
+setLayout(new FlowLayout());
+lblInput = new JLabel("Enter a decimal number:");
+lblOutput = new JLabel("Binary is: ");
+txtInput = new JTextField(5);
+btnConvert = new JButton("Binary Convertor");
+btnConvert.addActionListener(this);
+add(lblInput);
+add(txtInput);
+add(btnConvert);
+add(lblOutput);
+setSize(300, 300);
+setTitle("Irfan_9");
+setVisible(true);
+}
+@Override
+public void actionPerformed(ActionEvent e) {
+String input = txtInput.getText();
+int number = Integer.parseInt(input);
+String binary = Integer.toBinaryString(number);
+lblOutput.setText("Binary: " + binary);
+}
+}
+public class DecimalToBinaryTest
+{
+public static void main(String[] args)
+{
+DTBDemo obj = new DTBDemo();
+}
+}
