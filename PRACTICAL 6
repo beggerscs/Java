@@ -1,0 +1,123 @@
+Q.Develop an application using swing to display JFrame with size (300,300)
+
+import javax.swing.JFrame;
+import javax.swing.SwingUtilities;
+class JFrameDemo extends JFrame {
+public JFrameDemo() {
+setSize(300, 300);
+setTitle("Irfan 20");
+setResizable(false);
+setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+setVisible(true);
+}
+}
+public class JFrameDemoApp {
+public static void main(String[] args) {
+SwingUtilities.invokeLater(() -> {
+new JFrameDemo();
+});
+}
+}
+
+
+
+
+Q.Develop an application using swing to demonstrate flow layout using 5 buttons.
+import java.awt.*;
+import javax.swing.*;
+class ButtonsDemo extends JFrame
+{
+JButton btn1, btn2, btn3, btn4, btn5;
+JPanel p;
+public ButtonsDemo()
+{
+setLayout(new FlowLayout());
+btn1 = new JButton("Button1");
+btn2 = new JButton("Button2");
+btn3 = new JButton("Button3");
+btn4 = new JButton("Button4");
+btn5 = new JButton("Button5");
+p = new JPanel();
+p.setLayout(new FlowLayout());
+p.add(btn1);
+p.add(btn2);
+p.add(btn3);
+p.add(btn4);
+p.add(btn5);
+add(p);
+setSize(300, 300);
+setTitle("Irfan 9");
+setResizable(false);
+setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+setVisible(true);
+}
+}
+public class Buttons
+{
+public static void main(String[] args)
+{
+new ButtonsDemo();
+}
+}
+
+
+
+
+Q.Develop an application using swing to demonstrate Border layout using 5 buttons
+
+import java.awt.*;
+import javax.swing.*;
+class JButtonDemo extends JFrame
+{
+JButton btn1, btn2, btn3, btn4, btn5;
+public JButtonDemo()
+{
+setLayout(new BorderLayout());
+btn1 = new JButton("Button1");
+btn2 = new JButton("Button2");
+btn3 = new JButton("Button3");
+btn4 = new JButton("Button4");
+btn5 = new JButton("Button5");
+add(btn1, BorderLayout.SOUTH);
+add(btn2, BorderLayout.NORTH);
+add(btn3, BorderLayout.EAST);
+add(btn4, BorderLayout.WEST);
+add(btn5, BorderLayout.CENTER);
+setSize(300, 300);
+setTitle("Irfan 9");
+setResizable(false);
+setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+setVisible(true);
+}
+}
+public class Btndemo
+{
+public static void main(String[] args)
+{
+new JButtonDemo();
+}
+}
+
+
+
+
+Q.Develop an application using swing to demonstrate the use of grid layout
+
+import java.awt.*;
+import javax.swing.*;
+public class GridLayoutDemo extends JFrame {
+public GridLayoutDemo() {
+setLayout(new GridLayout(3, 3, 5, 5));
+for (int i = 1; i <= 9; i++) {
+add(new JButton("Button " + i));
+}
+setSize(400, 400);
+setTitle("Irfan 9");
+setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+setLocationRelativeTo(null);
+setVisible(true);
+}
+public static void main(String[] args) {
+new GridLayoutDemo();
+}
+}
