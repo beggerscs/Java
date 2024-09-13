@@ -1,0 +1,120 @@
+Q.Write a program to accept number from user and display reverse and sum of digits of that number.
+
+import java.util.*;
+public class ReverseTest {
+ public static void main(String[] args) {
+ Scanner sc = new Scanner(System.in);
+ System.out.println("Irfan Ali, Roll No: 9");
+ System.out.println("Enter the Number:");
+ int num = sc.nextInt();
+ int rev = 0;
+ int sum = 0;
+ while (num > 0) {
+ int r = num % 10;
+ rev = rev * 10 + r;
+ sum = sum + r;
+ num = num / 10;
+ }
+ System.out.println("Reverse = " + rev);
+ System.out.println("Sum of Digits = " + sum);
+ sc.close();
+ }
+}
+
+
+
+
+Q.Write a program to accept number from user and display the factorial of number.
+
+import java.util.*;
+public class FactorialTest {
+ public static void main(String[] args) {
+ Scanner sc = new Scanner(System.in);
+ System.out.println("Irfan Ali, Roll No: 9");
+ System.out.println("Enter the Number:");
+ int num = sc.nextInt();
+ int factorial = 1;
+ for (int i = 1; i <= num; i++) {
+ factorial = factorial * i;
+ }
+ System.out.println("Factorial = " + factorial);
+ sc.close();
+ }
+}
+
+
+
+
+Write a program to accept 10 numbers from user and display all the even numbers.
+
+import java.util.*;
+public class EvenTest {
+ public static void main(String[] args) {
+ int num[] = new int[10];
+ Scanner sc = new Scanner(System.in);
+ System.out.println("Irfan Ali, Roll No: 9");
+ System.out.println("Enter 10 Numbers:");
+ for (int i = 0; i < 10; i++) {
+ num[i] = sc.nextInt();
+ }
+ System.out.println("Even Numbers Are:");
+ for (int i = 0; i < 10; i++) {
+ if (num[i] % 2 == 0) {
+ System.out.print(num[i] + "\t");
+ }
+ }
+ sc.close();
+ }
+}
+
+Q.Write a program to accept 5 from user and display the largest number.
+
+import java.util.*;
+public class LargestArray {
+ public static void main(String[] args) {
+ int num[] = new int[5];
+ Scanner sc = new Scanner(System.in);
+ System.out.println("Irfan Ali, Roll No: 9");
+ System.out.println("Enter 5 Numbers:");
+ for (int i = 0; i < num.length; i++) {
+ num[i] = sc.nextInt();
+ }
+ int large = num[0];
+ for (int i = 1; i < num.length; i++) {
+ if (large < num[i]) {
+ large = num[i];
+ }
+ }
+ System.out.println("Largest Number: " + large);
+ sc.close();
+ }
+}
+
+
+
+
+Q.Write a program to accept 10 number from user and sort the number in ascending order.
+
+import java.util.Arrays;
+import java.util.Scanner;
+public class Ascending {
+ public static void main(String[] args) {
+ int[] num = new int[10];
+ Scanner sc = new Scanner(System.in);
+ System.out.println("Irfan Ali, Roll No: 9");
+ System.out.println("Enter 10 Numbers:");
+ for (int i = 0; i < num.length; i++) {
+ num[i] = sc.nextInt();
+ }
+ System.out.println("Array Elements Are:");
+ for (int n : num) {
+ System.out.println(n);
+ }
+ Arrays.sort(num);
+ System.out.println("Sorted Elements Are:");
+ for (int n : num) {
+ System.out.println(n);
+ }
+ sc.close();
+ }
+}
