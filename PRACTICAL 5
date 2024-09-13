@@ -1,0 +1,80 @@
+Q.Write a program to implement Method Overriding
+
+class Base {
+void show() {
+System.out.println("Base class show()");
+}
+}
+class Derived extends Base {
+@Override
+void show() {
+System.out.println("Derived class show()");
+}
+}
+public class MethodOverriding {
+public static void main(String[] args) {
+System.out.println("Irfan 9");
+final int a = 10;
+System.out.println("a = " + a);
+Derived obj = new Derived();
+obj.show();
+}
+}
+
+
+
+
+Q.Write a program to implement runtime polymorphism using abstract class andabstract method
+
+abstract class Shape {
+abstract void area();
+}
+class Rectangle extends Shape {
+@Override
+void area() {
+double length = 10.4;
+double width = 33.3;
+double ans = length * width;
+System.out.println("Area of Rectangle = " + ans);
+}
+}
+class Circle extends Shape {
+@Override
+void area() {
+final double PI = 3.14;
+double radius = 3.3;
+double ans = PI * radius * radius;
+System.out.println("Area of Circle = " + ans);
+}
+}
+public class AbstractMethod {
+public static void main(String[] args) {
+System.out.println("Irfan 9");
+Shape r = new Rectangle();
+Shape c = new Circle();
+r.area();
+c.area();
+}
+}
+
+
+
+
+Q.Write a program to create an interface Myinterface having method to displaythemessage. create a class which implement My interface and call interface Method
+
+interface MyInterface {
+void display();
+}
+class CallInter implements MyInterface {
+@Override
+public void display() {
+System.out.println("Interface display() Method");
+}
+}
+public class InterfaceDemo {
+public static void main(String[] args) {
+System.out.println("Irfan 9");
+CallInter obj = new CallInter();
+obj.display();
+}
+}
