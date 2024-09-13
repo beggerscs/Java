@@ -1,0 +1,134 @@
+Q.Write a program to implement following types of inheritance Single Inheritance
+
+class A {
+void displayA() {
+System.out.println("Class A display");
+}
+}
+class B extends A {
+void displayB() {
+System.out.println("Class B display");
+}
+}
+public class SingleIn {
+public static void main(String[] args) {
+System.out.println("Irfan 9");
+B obj = new B();
+obj.displayA();
+obj.displayB();
+}
+}
+
+
+
+
+Q.Write a program to implement following types of inheritance Multi-level Inheritance
+
+class A1 {
+void displayA() {
+System.out.println("Class A display");
+}
+}
+class B1 extends A1 {
+void displayB() {
+System.out.println("Class B display");
+}
+}
+class C1 extends B1 {
+void displayC() {
+System.out.println("Class C display");
+}
+}
+public class MultiIn {
+public static void main(String[] args) {
+System.out.println("Irfan 9");
+B1 obj = new B1();
+obj.displayA();
+obj.displayB();
+C1 obj1 = new C1();
+obj1.displayA();
+obj1.displayB();
+obj1.displayC();
+}
+}
+
+
+
+
+Q.Write a program to implement following types of inheritance Hierarchical
+
+class A2 {
+void displayA() {
+System.out.println("Class A display");
+}
+}
+class B2 extends A2 {
+void displayB() {
+System.out.println("Class B display");
+}
+}
+class C2 extends A2 {
+void displayC() {
+System.out.println("Class C display");
+}
+}
+class D2 extends A2 {
+void displayD() {
+System.out.println("Class D display");
+}
+}
+public class Herachical {
+public static void main(String[] args) {
+System.out.println("Irfan 9");
+B2 obj = new B2();
+obj.displayA();
+obj.displayB();
+C2 obj1 = new C2();
+obj1.displayA();
+obj1.displayC();
+D2 obj3 = new D2();
+obj3.displayA();
+obj3.displayD();
+}
+}
+
+
+
+
+Q.Write a program to implement following types of inheritance Hybrid Inheritance
+
+class A1 {
+void displayA1() {
+System.out.println("Display class A1");
+}
+}
+class B1 extends A1 {
+void displayB1() {
+System.out.println("Display class B1");
+}
+}
+class C1 extends B1 {
+void displayC1() {
+System.out.println("Display class C1");
+}
+}
+class D1 extends B1 {
+void displayD1() {
+System.out.println("Display class D1");
+}
+}
+public class HybridIn {
+public static void main(String[] args) {
+System.out.println("Irfan 9");
+B1 obj = new B1();
+obj.displayA1();
+obj.displayB1();
+C1 obj1 = new C1();
+obj1.displayA1();
+obj1.displayB1();
+obj1.displayC1();
+D1 obj2 = new D1();
+obj2.displayA1();
+obj2.displayB1();
+obj2.displayD1();
+}
