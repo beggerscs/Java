@@ -1,0 +1,123 @@
+Q.Write a program to create a Class employee having Data Member Employee I'D, Employee Name , Employee Salary , Employee Department. Except these details
+from employee and display the save
+
+import java.util.Scanner;
+class Employee {
+int empid;
+String empname;
+int empsal;
+String empdept;
+void getEmployee() {
+Scanner sc = new Scanner(System.in);
+System.out.println("Enter Employee Details (id, name, salary, dept):");
+empid = sc.nextInt();
+empname = sc.next();
+empsal = sc.nextInt();
+empdept = sc.next();
+}
+void displayEmployee() {
+System.out.println("Emp-ID = " + empid);
+System.out.println("Emp-Name = " + empname);
+System.out.println("Emp-Salary = " + empsal);
+System.out.println("Emp-Dept = " + empdept);
+}
+}
+public class Datamember {
+public static void main(String[] args) {
+System.out.println("Irfan 9");
+Employee e1 = new Employee();
+e1.getEmployee();
+e1.displayEmployee();
+}
+}
+
+
+
+
+Q.Write a program to implement overloading in java. class MethodOver {
+void add(int n1, int n2) {
+System.out.println("ADDITION OF TWO INTEGER: " + (n1 + n2));
+}
+void add(int n1, int n2, int n3) {
+System.out.println("ADDITION OF THREE INTEGER: " + (n1 + n2 + n3));
+}
+void add(double n1, double n2) {
+System.out.println("ADDITION OF TWO DOUBLE: " + (n1 + n2));
+}
+}
+public class MethodTest {
+public static void main(String[] args) {
+System.out.println("Irfan 9");
+MethodOver obj = new MethodOver();
+obj.add(15, 25, 35);
+obj.add(4.4, 5.5);
+obj.add(4, 5);
+}
+}
+
+
+
+
+Q.Write a program to create a class student having data member, student
+I'd ,Student Class, Student Name. Use parameterized Constructor to initialize
+data member and display all the details. import java.util.*;
+class StudentTest {
+int stuid;
+String stuname;
+String stuclass;
+StudentTest(int id, String name, String studentClass) {
+stuid = id;
+stuname = name;
+stuclass = studentClass;
+}
+void displayStudentTest() {
+System.out.println("Student-ID = " + stuid);
+System.out.println("Student-Name = " + stuname);
+System.out.println("Student-Class = " + stuclass);
+}
+}
+public class Student {
+public static void main(String[] args) {
+System.out.println("Irfan 9");
+StudentTest s = new StudentTest(9, "Irfan", "SYBSC-CS");
+s.displayStudentTest();
+}
+}
+
+
+
+
+Q.Write a program to create copy constructor which is used to copy the value fromoneobject to other. class Copy {
+int x;
+int y;
+int z;
+Copy() {
+x = 0;
+y = 0;
+z = 0;
+}
+Copy(int a, int b, int c) {
+x = a;
+y = b;
+z = c;
+}
+Copy(Copy obj) {
+x = obj.x;
+y = obj.y;
+z = obj.z;
+}
+void display() {
+System.out.println("x = " + x);
+System.out.println("y = " + y);
+System.out.println("z = " + z);
+}
+}
+public class CopyCons {
+public static void main(String[] args) {
+System.out.println("Irfan 9");
+Copy obj1 = new Copy(1, 2, 3);
+Copy obj2 = new Copy(obj1);
+obj1.display();
+obj2.display();
+}
+}
